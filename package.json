@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "del ./build/*",
     "build": "tsc",
-    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish --access public"
   },
   "author": "zabcode",
   "license": "ISC",
