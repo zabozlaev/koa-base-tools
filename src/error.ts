@@ -7,7 +7,7 @@ export class SubError {
 export class HttpError extends Error {
   constructor(
     message: string,
-    public code: number = httpStatusCodes.BAD_REQUEST,
+    public status: number = httpStatusCodes.BAD_REQUEST,
     public subErrors: SubError[] = []
   ) {
     super(message);
