@@ -4,11 +4,7 @@ import { Validator } from "class-validator";
 import { Handler } from "../custom";
 import { HttpError } from "../error";
 
-type Constructor<T> = { new (): T };
-
-export const validateBody: <T>(type: Constructor<T>) => Handler = <T>(
-  type: Constructor<T>
-) => {
+export const validateBody: (type: any) => Handler = (type) => {
   const validator = new Validator();
   return async (ctx, next) => {
     const data = plainToClass(type, ctx.request.body);
