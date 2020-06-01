@@ -5,7 +5,10 @@ import { ErrorResponse } from "../errorResponse";
 
 type LogFn = (error: Error) => void | Promise<void>;
 
-export const errorHandler = async (ctx: Context, next: Next, log?: LogFn) => {
+export const errorHandler = (log?: LogFn) => async (
+  ctx: Context,
+  next: Next
+) => {
   try {
     await next();
   } catch (err) {

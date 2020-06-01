@@ -1,7 +1,6 @@
 import * as httpStatusCodes from "http-status-codes";
 import { plainToClass } from "class-transformer";
 import { Validator } from "class-validator";
-import { IMiddleware } from "koa-router";
 import { Handler } from "../custom";
 import { HttpError } from "../error";
 
