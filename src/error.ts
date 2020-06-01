@@ -1,7 +1,7 @@
 import * as httpStatusCodes from "http-status-codes";
 
 export class SubError {
-  constructor(public field: string, public message: string) {}
+  constructor(public message: string, public field?: string) {}
 }
 
 export class HttpError extends Error {
